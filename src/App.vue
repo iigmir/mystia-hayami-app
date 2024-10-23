@@ -7,11 +7,13 @@
 </template>
 
 <script setup>
-import { useDataStore } from "./store/data";
+import { useFoodStore } from "./store/food";
+import { useDemographyStore } from "./store/demography";
 import HeaderTitle from "./components/HeaderTitle.vue";
 import TheNavigator from "./components/TheNavigator.vue";
 
-useDataStore().get_all();
+useFoodStore().get_all();
+useDemographyStore().get_all();
 </script>
 
 <style scoped>
