@@ -1,5 +1,16 @@
 {
     "app_title": "早见夜雀",
     "commons": {},
-    "home": {}
+    "home": {
+        "title": "首页",
+        "subtitle": "欢迎使用{app_title}！"
+    },
+    "about": {
+        "title": "关于",
+        "subtitle": "Welcome to use {app_title}!"
+    },
+    "place": {
+        "title": "地点",
+        "subtitle": "Where do you want to go today?"
+    }
 }

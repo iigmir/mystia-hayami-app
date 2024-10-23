@@ -1,5 +1,16 @@
 {
     "app_title": "Mystia Hayami",
     "commons": {},
-    "home": {}
+    "home": {
+        "title": "Home",
+        "subtitle": "Welcome to use {app_title}!"
+    },
+    "about": {
+        "title": "About",
+        "subtitle": "Welcome to use {app_title}!"
+    },
+    "place": {
+        "title": "Place",
+        "subtitle": "Where do you want to go today?"
+    }
 }

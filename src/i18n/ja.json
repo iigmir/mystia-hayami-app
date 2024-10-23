@@ -1,5 +1,16 @@
 {
     "app_title": "ミスティア・ハヤミ",
     "commons": {},
-    "home": {}
+    "home": {
+        "title": "ホームページ",
+        "subtitle": "ようこそ。ご利用にありがとうございます。"
+    },
+    "about": {
+        "title": "サイトについて",
+        "subtitle": "Welcome to use {app_title}!"
+    },
+    "place": {
+        "title": "場所",
+        "subtitle": "Where do you want to go today?"
+    }
 }

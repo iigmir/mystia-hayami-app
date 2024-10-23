@@ -1,7 +1,7 @@
 <template>
     <article id="router-places">
-        <h1>地點</h1>
-        <p>Where do you want to go today?</p>
+        <h1>{{ $t("place.title") }}</h1>
+        <p>{{ $t("place.subtitle") }}</p>
         <section class="ts-select">
             <select v-model="chosen_place">
                 <option v-for="its in store.places" v-bind:key="its.game_id" v-bind:value="its.game_id">
