@@ -1,24 +1,19 @@
 import { createI18n } from "vue-i18n";
+import zhHans from "./zh-hans.json";
+import zhHant from "./zh-hant.json";
+import en from "./en.json";
+import ja from "./ja.json";
+import ko from "./ko.json";
 
 const i18n = createI18n({
     locale: "zh-hans",
     fallbackLocale: "zh-hant",
     messages: {
-        "zh-hans": {
-            app_title: "早见夜雀"
-        },
-        "zh-hant": {
-            app_title: "早見夜雀"
-        },
-        "en": {
-            app_title: "Mystia Hayami"
-        },
-        "ja": {
-            app_title: "ミスティア・ハヤミ"
-        },
-        "ko": {
-            app_title: "미스티아 하야미"
-        },
+        "zh-hans": zhHans,
+        "zh-hant": zhHant,
+        "en": en,
+        "ja": ja,
+        "ko": ko,
     }
 });
 

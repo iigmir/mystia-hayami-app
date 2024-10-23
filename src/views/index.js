@@ -2,7 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 // Local routes
 import HomeView from "./Home.vue";
 import AboutView from "./About.vue";
-import PlaceView from "./Place/Place.vue";
+import PlaceView from "./Place/index.vue";
 
 const router = createRouter({
     history: createWebHistory(),

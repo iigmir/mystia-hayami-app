@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from "vue";
+import { computed, ref, onMounted } from "vue";
 import { useDemographyStore } from "../../store/demography.js";
 import MetadataTab from "./MetadataTab.vue";
 import CustomerTab from "./CustomerTab.vue";
@@ -71,6 +71,11 @@ const selected_tab = computed( () => {
         case 3: return TagsTab;
         default: return EmptyTab;
     }
+});
+
+// Action
+onMounted( () => {
+    init_place( store.demography_done );
 });
 </script>
 
