@@ -1,6 +1,6 @@
 <template>
     <article id="router-places">
-        <h2>地點</h2>
+        <h1>地點</h1>
         <p>Where do you want to go today?</p>
         <section class="ts-select">
             <select v-model="chosen_place">

@@ -1,6 +1,6 @@
 <template>
     <div class="customers">
-        <h3>來客</h3>
+        <h2>來客</h2>
         <section class="normal">
             <h4>普通</h4>
             <div class="ts-grid">

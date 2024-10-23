@@ -1,7 +1,7 @@
 <template>
     <!-- You can test Vue i18n here. -->
     <header class="header-box">
-        <div class="title">
+        <div class="ts-header is-heavy title">
             <h1>{{ $t("app_title") }}</h1>
         </div>
         <div class="languages">

@@ -1,6 +1,6 @@
 <template>
     <div class="tags">
-        <h3>標籤</h3>
+        <h2>標籤</h2>
         <p>什麼樣的標籤最受歡迎？</p>
         <table class="ts-table is-striped">
             <thead>

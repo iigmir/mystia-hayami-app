@@ -1,6 +1,6 @@
 <template>
     <div class="metadata">
-        <h3>基本資料</h3>
+        <h2>基本資料</h2>
         <table class="ts-table is-striped">
             <caption>基本資料</caption>
             <tbody>
