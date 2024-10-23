@@ -1,25 +1,28 @@
 <template>
     <div>
-        <dl>
-            <dt>Name</dt>
-            <dd>{{ name }}</dd>
-            <dt>Links</dt>
-            <dd>
-                <inter-link type="wikidata" :qid="item.links.wikidata" text="wikidata" />
-                <inter-link type="thwiki" :qid="item.links.thwiki" text="thwiki" />
-                <inter-link type="touhouwiki" :qid="item.links.touhouwiki" text="touhouwiki" />
-                <!-- props: {
-        id: String,
-        text: String,
-        type: String,
-    }, -->
-                <!-- <a v-if="item.links.wikidata" href="https://www.wikidata.org/wiki/Q31732">{{ item.links.wikidata }}</a> ,
-                <a v-if="item.links.thwiki" href="https://thwiki.cc/%E5%AE%98%E6%96%B9%E5%9C%BA%E6%99%AF">{{ item.links.thwiki }}</a> ,
-                <a v-if="item.links.touhouwiki" href="https://touhouwiki.org/wiki/%E5%AE%98%E6%96%B9%E5%9C%BA%E6%99%AF">{{ item.links.touhouwiki }}</a> -->
-            </dd>
-            <dt>DLC</dt>
-            <dd>{{ item.dlc }}</dd>
-        </dl>
+        <table class="ts-table is-striped">
+            <caption>基本資料</caption>
+            <tbody>
+                <tr>
+                    <td>名稱</td>
+                    <td>{{ name }}</td>
+                </tr>
+                <tr>
+                    <td>連結</td>
+                    <td>
+                        <ul>
+                            <li v-if="item.links.wikidata"><inter-link type="wikidata" :qid="item.links.wikidata" text="wikidata" /></li>
+                            <li v-if="item.links.thwiki"><inter-link type="thwiki" :qid="item.links.thwiki" text="thwiki" /></li>
+                            <li v-if="item.links.touhouwiki"><inter-link type="touhouwiki" :qid="item.links.touhouwiki" text="touhouwiki" /></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DLC</td>
+                    <td>{{ item.dlc }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </template>
 
@@ -45,19 +48,18 @@ const InterLink = {
     setup(props) {
         const href = computed( () => {
             switch (props.type) {
-                case "wikidata": return "https://www.wikidata.org/wiki/" + props.qid;
-                case "thwiki": return "https://thwiki.cc/" + props.qid;
-                case "touhouwiki": return "https://en.touhouwiki.net/wiki/" + props.qid;
+                case "wikidata": return `https://www.wikidata.org/wiki/${props.qid}`;
+                case "thwiki": return `https://thwiki.cc/${props.qid}`;
+                case "touhouwiki": return `https://en.touhouwiki.net/wiki/${props.qid}`;
                 default: return "";
             }
         });
         // return the render function
         return () => props.qid ? h("a", {
             href: href.value,
-            textContent: props.text + ", "
+            textContent: props.text
         }) : "";
     },
-    // template: `<a v-if="qid" v-bind:href="get_link">{{ text }}</a> `
 };
 </script>
 
