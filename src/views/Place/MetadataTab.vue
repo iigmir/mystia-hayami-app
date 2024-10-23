@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="metadata">
+        <h3>基本資料</h3>
         <table class="ts-table is-striped">
             <caption>基本資料</caption>
             <tbody>
@@ -27,39 +28,21 @@
 </template>
 
 <script setup>
-import { defineProps, computed, h } from "vue";
+import { computed, h } from "vue";
 import { useI18n } from "vue-i18n";
+import InterLink from "./components/InterLink.vue";
+
 const exp =  {
-    "app_id": 0, "app_label_id": "", "game_id": "",
+    "app_id": 0,
+    "app_label_id": "",
+    "game_id": "",
     "name": { "zh-hans": "", "zh-hant": "", "en": "", "ja": "", "ko": "" },
-    "dlc": "CORE", "links": { "wikidata": null, "thwiki": null, "touhouwiki": null }
+    "links": { "wikidata": null, "thwiki": null, "touhouwiki": null },
+    "dlc": "CORE"
 };
 const props = defineProps(["item"]);
 const item = computed( () => props?.item ?? exp );
 
 const name = computed( () => item.value.name[useI18n().locale.value] ?? "-" );
-
-const InterLink = {
-    props: {
-        qid: String,
-        text: String,
-        type: String,
-    },
-    setup(props) {
-        const href = computed( () => {
-            switch (props.type) {
-                case "wikidata": return `https://www.wikidata.org/wiki/${props.qid}`;
-                case "thwiki": return `https://thwiki.cc/${props.qid}`;
-                case "touhouwiki": return `https://en.touhouwiki.net/wiki/${props.qid}`;
-                default: return "";
-            }
-        });
-        // return the render function
-        return () => props.qid ? h("a", {
-            href: href.value,
-            textContent: props.text
-        }) : "";
-    },
-};
 </script>
 

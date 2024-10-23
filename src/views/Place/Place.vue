@@ -1,16 +1,14 @@
 <template>
-    <div id="router-places">
-        <h2>Place</h2>
+    <article id="router-places">
+        <h2>地點</h2>
         <p>Where do you want to go today?</p>
-        <select v-model="chosen_place">
-            <option
-                v-for="its in store.places"
-                v-bind:key="its.game_id"
-                v-bind:value="its.game_id"
-            >
-                {{ its.name[$i18n.locale] }}
-            </option>
-        </select>
+        <section class="ts-select">
+            <select v-model="chosen_place">
+                <option v-for="its in store.places" v-bind:key="its.game_id" v-bind:value="its.game_id">
+                    {{ its.name[$i18n.locale] }}
+                </option>
+            </select>
+        </section>
         <section>
             <div class="ts-tab">
                 <a
@@ -27,14 +25,14 @@
         <section>
              <component v-bind:is="selected_tab" v-bind:item="selected_item" />
         </section>
-    </div>
+    </article>
 </template>
 
 <script setup>
-import { useDemographyStore } from "../../store/demography.js";
 import { computed, ref } from "vue";
-// Components
+import { useDemographyStore } from "../../store/demography.js";
 import MetadataTab from "./MetadataTab.vue";
+import CustomerTab from "./CustomerTab.vue";
 import EmptyTab from "./EmptyTab.vue";
 
 // Store module
@@ -68,6 +66,7 @@ const set_tab_model = ({ value = 1 }) => {
 const selected_tab = computed( () => {
     switch (tab_model.value) {
         case 1: return MetadataTab;
+        case 2: return CustomerTab;
         default: return EmptyTab;
     }
 });
