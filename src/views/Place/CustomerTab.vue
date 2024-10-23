@@ -4,25 +4,30 @@
         <section class="normal">
             <h4>普通</h4>
             <div class="ts-grid">
-                <div class="column is-4-wide" v-for="its in fitted_normal_guests">
-                    {{ its.name[$i18n.locale] }}
-                </div>
+                <customer-info
+                    v-for="item in fitted_normal_guests"
+                    v-bind:key="item.game_id"
+                    v-bind:item="item"
+                    hide-avatar
+                />
             </div>
         </section>
         <div class="ts-divider is-section has-top-spaced-large"></div>
         <section class="rare">
             <h4>稀有、特殊</h4>
             <div class="ts-grid">
-                <div class="column is-4-wide" v-for="its in fitted_rare_guests">
-                    <p>{{ its.data.avatar ? its.data.avatar[0] : "" }}</p>
-                    <p>{{ its.name[$i18n.locale] }}</p>
-                </div>
+                <customer-info
+                    v-for="item in fitted_rare_guests"
+                    v-bind:key="item.game_id"
+                    v-bind:item="item"
+                />
             </div>
         </section>
     </div>
 </template>
 
 <script setup>
+import CustomerInfo from "./components/CustomerInfo.vue";
 import { onMounted, computed } from "vue";
 import { useFoodStore } from "../../store/food";
 import { useDemographyStore } from "../../store/demography";

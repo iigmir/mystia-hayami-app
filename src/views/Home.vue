@@ -1,6 +1,9 @@
 <template>
     <div id="router-home">
         <h2>Home</h2>
-        <span class="ts-icon is-user-icon"></span>
+        <p>
+            <span class="ts-icon is-user-icon"></span>
+            Welcome!
+        </p>
     </div>
 </template>
