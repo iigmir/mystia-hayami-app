@@ -2,7 +2,6 @@
     <div class="tags">
         <h3>標籤</h3>
         <p>什麼樣的標籤最受歡迎？</p>
-        <!-- <p>{{ dish_tags }}</p> -->
         <table class="ts-table is-striped">
             <thead>
                 <tr>
@@ -55,6 +54,7 @@ const get_each_number = (acc, num) => {
     acc[num] = (acc[num] || 0) + 1;
     return acc;
 };
+
 const get_tags_table = (obj = { "-1": 1 }, tags = [{ game_id: -1, name: { en: "" } }]) => {
     return Object.entries( obj ).map( ([tagid, amount]) => {
         const { name } = tags.find( i => i.game_id === tagid );
@@ -62,33 +62,23 @@ const get_tags_table = (obj = { "-1": 1 }, tags = [{ game_id: -1, name: { en: ""
     }).toSorted( (x, y) => y.amount - x.amount );
 };
 
-// Dish tag module
-const dish_tags = computed( () => food_store.dish_tags );
-const guest_likes = computed( () => {
-    const get_user = (guest) => guest
+const all_avaiable_guests = computed(() =>
+    demography_store.normal_guests
+        .concat( demography_store.rare_guests )
         .filter( ({ data }) => data.visits.includes( props.item.game_id ) )
-        .map( ({ data }) => data.likes )
-    ;
-    const numbers = get_user( demography_store.normal_guests )
-        .concat( get_user(demography_store.rare_guests) )
-        .flat()
-        .reduce(get_each_number, {})
-    ;
-    return get_tags_table(numbers, dish_tags.value);
+);
+
+// Dish tag module
+const guest_likes = computed( () => {
+    const action = ({ data }) => data.likes;
+    const numbers = all_avaiable_guests.value.map( action ).flat().reduce( get_each_number, {} );
+    return get_tags_table(numbers, food_store.dish_tags);
 });
 
 // beverage tag module
-const beverage_tags = computed( () => food_store.beverage_tags );
 const guest_drinks = computed( () => {
-    const get_user = (guest) => guest
-        .filter( ({ data }) => data.visits.includes( props.item.game_id ) )
-        .map( ({ data }) => data.drinks )
-    ;
-    const numbers = get_user( demography_store.normal_guests )
-        .concat( get_user(demography_store.rare_guests) )
-        .flat()
-        .reduce(get_each_number, {})
-    ;
-    return get_tags_table(numbers, beverage_tags.value);
+    const action = ({ data }) => data.drinks;
+    const numbers = all_avaiable_guests.value.map( action ).flat().reduce( get_each_number, {} );
+    return get_tags_table(numbers, food_store.beverage_tags);
 });
 </script>
