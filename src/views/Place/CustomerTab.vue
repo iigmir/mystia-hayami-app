@@ -8,7 +8,6 @@
                     v-for="item in fitted_normal_guests"
                     v-bind:key="item.game_id"
                     v-bind:item="item"
-                    hide-avatar
                 />
             </div>
         </section>
@@ -29,28 +28,14 @@
 <script setup>
 import CustomerInfo from "./components/CustomerInfo.vue";
 import { onMounted, computed } from "vue";
-import { useFoodStore } from "../../store/food";
 import { useDemographyStore } from "../../store/demography";
 
 // Store & Props module
 const props = defineProps(["item"]);
-const food_store = useFoodStore();
 const demography_store = useDemographyStore();
 
-const fitted_normal_guests = computed( () => {
-    return demography_store.normal_guests.filter( ({ data }) => {
-        return data.visits.includes(props.item.game_id);
-    });
-});
-const fitted_rare_guests = computed( () => {
-    return demography_store.rare_guests.filter( ({ data }) => {
-        return data.visits.includes(props.item.game_id);
-    });
-});
-
-onMounted( () => {
-    if( !food_store.food_done ) {
-        food_store.get_all();
-    }
-});
+// List module
+const get_game_id = ({ data }) => data.visits.includes(props.item.game_id);
+const fitted_normal_guests = computed( () => demography_store.normal_guests.filter( get_game_id ) );
+const fitted_rare_guests = computed( () => demography_store.rare_guests.filter( get_game_id ) );
 </script>

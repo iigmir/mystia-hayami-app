@@ -33,6 +33,7 @@ import { computed, ref } from "vue";
 import { useDemographyStore } from "../../store/demography.js";
 import MetadataTab from "./MetadataTab.vue";
 import CustomerTab from "./CustomerTab.vue";
+import TagsTab from "./TagsTab.vue";
 import EmptyTab from "./EmptyTab.vue";
 
 // Store module
@@ -67,6 +68,7 @@ const selected_tab = computed( () => {
     switch (tab_model.value) {
         case 1: return MetadataTab;
         case 2: return CustomerTab;
+        case 3: return TagsTab;
         default: return EmptyTab;
     }
 });
