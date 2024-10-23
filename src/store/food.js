@@ -4,10 +4,12 @@ export const useFoodStore = defineStore("food", {
     state: () => ({
         food_done: false,
         dishes: [],
-        dish_tags: [],
         beverages: [],
-        beverage_tags: [],
         ingredients: [],
+
+        // Tags
+        dish_tags: [],
+        beverage_tags: [],
     }),
     actions: {
         get_all() {
