@@ -27,8 +27,8 @@
 
 <script setup>
 import CustomerInfo from "./components/CustomerInfo.vue";
-import { onMounted, computed } from "vue";
-import { useDemographyStore } from "../../store/demography";
+import { computed } from "vue";
+import { useDemographyStore } from "@/store/demography";
 
 // Store & Props module
 const props = defineProps(["item"]);
