@@ -7,7 +7,8 @@
     },
     "about": {
         "title": "サイトについて",
-        "subtitle": "Welcome to use {app_title}!"
+        "description1": "I want to do a quick search and see data on <cite><a href='https://store.steampowered.com/app/1584090'>Touhou Mystia's Izakaya</a></cite>, so you see the site.",
+        "description2": "The code is avaiable on <a href='https://github.com/iigmir/mystia-hayami-app'>Github</a> and licenced with the <a href='https://www.mozilla.org/en-US/MPL/2.0'>Mozilla Public License</a>."
     },
     "place": {
         "title": "場所",

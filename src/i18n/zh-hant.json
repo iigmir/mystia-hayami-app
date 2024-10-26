@@ -7,7 +7,8 @@
     },
     "about": {
         "title": "關於",
-        "subtitle": "Welcome to use {app_title}!"
+        "description1": "我想做一些可以在<a href='https://store.steampowered.com/app/1584090'>東方夜雀食堂</a>速查的資訊，所以做了這專案。就這樣。",
+        "description2": "程式放在 <a href='https://github.com/iigmir/mystia-hayami-app'>Github</a> 上，並以 <a href='https://www.mozilla.org/en-US/MPL/2.0'>MPL-2.0</a> 授權。"
     },
     "place": {
         "title": "地點",
