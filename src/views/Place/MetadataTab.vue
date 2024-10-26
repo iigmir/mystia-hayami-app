@@ -1,15 +1,15 @@
 <template>
     <div class="metadata">
-        <h2>基本資料</h2>
+        <h2>{{ $t("place.metadata.title") }}</h2>
         <table class="ts-table is-striped">
-            <caption>基本資料</caption>
+            <caption>{{ $t("place.metadata.name") }}</caption>
             <tbody>
                 <tr>
-                    <td>名稱</td>
+                    <td>{{ $t("place.metadata.name") }}</td>
                     <td>{{ name }}</td>
                 </tr>
                 <tr>
-                    <td>連結</td>
+                    <td>{{ $t("place.metadata.links") }}</td>
                     <td>
                         <ul>
                             <li v-if="item.links.wikidata"><inter-link type="wikidata" :qid="item.links.wikidata" text="wikidata" /></li>
@@ -19,7 +19,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>DLC</td>
+                    <td>{{ $t("place.metadata.dlc") }}</td>
                     <td>{{ item.dlc }}</td>
                 </tr>
             </tbody>

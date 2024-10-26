@@ -30,7 +30,9 @@
 
 <script setup>
 import { computed, ref, onMounted } from "vue";
+import { useI18n } from "vue-i18n";
 import { useDemographyStore } from "../../store/demography.js";
+// Components
 import MetadataTab from "./MetadataTab.vue";
 import CustomerTab from "./CustomerTab.vue";
 import TagsTab from "./TagsTab.vue";
@@ -55,10 +57,11 @@ store.$subscribe( (mutation, state) => {
 });
 
 // Tabs module
+const { t } = useI18n();
 const tabs = [
-    { value: 1, text: "基本資料", icon: "is-list-icon" },
-    { value: 2, text: "來客", icon: "is-chart-line-icon" },
-    { value: 3, text: "標籤", icon: "is-scroll-icon" },
+    { value: 1, text: t("place.metadata.title"), icon: "is-list-icon" },
+    { value: 2, text: t("place.customer.title"), icon: "is-chart-line-icon" },
+    { value: 3, text: t("place.tags.title"), icon: "is-scroll-icon" },
 ];
 const tab_model = ref(1);
 const set_tab_model = ({ value = 1 }) => {

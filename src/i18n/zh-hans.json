@@ -11,6 +11,24 @@
     },
     "place": {
         "title": "地点",
-        "subtitle": "Where do you want to go today?"
+        "subtitle": "Where do you want to go today?",
+        "customer": {
+            "title": "来客",
+            "regular": "普通",
+            "rare": "稀有、特殊"
+        },
+        "metadata": {
+            "title": "基本资料",
+            "name": "名称",
+            "links": "连结",
+            "dlc": "DLC"
+        },
+        "tags": {
+            "title": "标签",
+            "likes": "什么样的标签最受欢迎？",
+            "drinks": "那喝的呢？",
+            "th_tag": "标签",
+            "th_amo": "数量"
+        }
     }
 }

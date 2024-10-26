@@ -1,12 +1,12 @@
 <template>
     <div class="tags">
-        <h2>標籤</h2>
-        <p>什麼樣的標籤最受歡迎？</p>
+        <h2>{{ $t("place.tags.title") }}</h2>
+        <p>{{ $t("place.tags.likes") }}</p>
         <table class="ts-table is-striped">
             <thead>
                 <tr>
-                    <th>標籤</th>
-                    <th>數量</th>
+                    <th>{{ $t("place.tags.th_tag") }}</th>
+                    <th>{{ $t("place.tags.th_amo") }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -16,12 +16,12 @@
                 </tr>
             </tbody>
         </table>
-        <p>那喝的呢？</p>
+        <p>{{ $t("place.tags.drinks") }}</p>
         <table class="ts-table is-striped">
             <thead>
                 <tr>
-                    <th>標籤</th>
-                    <th>數量</th>
+                    <th>{{ $t("place.tags.th_tag") }}</th>
+                    <th>{{ $t("place.tags.th_amo") }}</th>
                 </tr>
             </thead>
             <tbody>

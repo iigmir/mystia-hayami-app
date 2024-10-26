@@ -11,6 +11,24 @@
     },
     "place": {
         "title": "場所",
-        "subtitle": "Where do you want to go today?"
+        "subtitle": "Where do you want to go today?",
+        "metadata": {
+            "title": "Metadata",
+            "name": "Name",
+            "links": "Link",
+            "dlc": "DLC"
+        },
+        "customer": {
+            "title": "Customers",
+            "regular": "Regular",
+            "rare": "Rare"
+        },
+        "tags": {
+            "title": "Tags",
+            "likes": "What kind of tags are popular among customers?",
+            "drinks": "How about drinks?",
+            "th_tag": "Tag",
+            "th_amo": "Amount"
+        }
     }
 }

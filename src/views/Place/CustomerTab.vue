@@ -1,8 +1,8 @@
 <template>
     <div class="customers">
-        <h2>來客</h2>
+        <h2>{{ $t("place.customer.title") }}</h2>
         <section class="normal">
-            <h4>普通</h4>
+            <h4>{{ $t("place.customer.regular") }}</h4>
             <div class="ts-grid">
                 <customer-info
                     v-for="item in fitted_normal_guests"
@@ -13,7 +13,7 @@
         </section>
         <div class="ts-divider is-section has-top-spaced-large"></div>
         <section class="rare">
-            <h4>稀有、特殊</h4>
+            <h4>{{ $t("place.customer.rare") }}</h4>
             <div class="ts-grid">
                 <customer-info
                     v-for="item in fitted_rare_guests"
