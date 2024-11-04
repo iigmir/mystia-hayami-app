@@ -33,7 +33,7 @@ import { computed, ref, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useDemographyStore } from "../../store/demography.js";
 // Components
-import MetadataTab from "./Tabs/MetadataTab.vue";
+import MetadataTab from "@/components/MetadataTable/index.vue";
 import CustomerTab from "./Tabs/CustomerTab.vue";
 import TagsTab from "./Tabs/TagsTab.vue";
 import EmptyTab from "./Tabs/EmptyTab.vue";
