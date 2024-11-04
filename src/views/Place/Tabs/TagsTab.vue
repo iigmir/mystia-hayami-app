@@ -37,8 +37,8 @@
 <script setup>
 import { onMounted, computed } from "vue";
 import { useI18n } from "vue-i18n";
-import { useFoodStore } from "../../store/food";
-import { useDemographyStore } from "../../store/demography";
+import { useFoodStore } from "@/store/food";
+import { useDemographyStore } from "@/store/demography";
 
 // Store & Props module
 const props = defineProps(["item"]);

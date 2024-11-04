@@ -33,10 +33,10 @@ import { computed, ref, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useDemographyStore } from "../../store/demography.js";
 // Components
-import MetadataTab from "./MetadataTab.vue";
-import CustomerTab from "./CustomerTab.vue";
-import TagsTab from "./TagsTab.vue";
-import EmptyTab from "./EmptyTab.vue";
+import MetadataTab from "./Tabs/MetadataTab.vue";
+import CustomerTab from "./Tabs/CustomerTab.vue";
+import TagsTab from "./Tabs/TagsTab.vue";
+import EmptyTab from "./Tabs/EmptyTab.vue";
 
 // Store module
 const store = useDemographyStore();

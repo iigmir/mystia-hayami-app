@@ -30,7 +30,7 @@
 <script setup>
 import { computed, h } from "vue";
 import { useI18n } from "vue-i18n";
-import InterLink from "./components/InterLink.vue";
+import InterLink from "../components/InterLink.vue";
 
 const exp =  {
     "app_id": 0,
