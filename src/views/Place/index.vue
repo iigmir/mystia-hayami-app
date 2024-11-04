@@ -44,17 +44,10 @@ const store = useDemographyStore();
 // Selected list module
 const chosen_place = ref("");
 const selected_item = computed( () => store.places.find( its => its.game_id === chosen_place.value ) );
-const init_place = (input = false) => {
-    if( input ) {
-        const first = store.places[0] ?? { game_id: "" };
-        chosen_place.value = first.game_id;
-    } else {
-        store.get_all();
-    }
+const local_action = (store) => {
+    const first = store.places[0] ?? { game_id: "" };
+    chosen_place.value = first.game_id;
 };
-store.$subscribe( (mutation, state) => {
-    init_place( state.demography_done );
-});
 
 // Tabs module
 const { t } = useI18n();
@@ -76,9 +69,19 @@ const selected_tab = computed( () => {
     }
 });
 
-// Action
+// Actions
+const init_store = (input = false) => {
+    if( input ) {
+        local_action(store);
+    } else {
+        store.get_all();
+    }
+};
+store.$subscribe( (mutation, state) => {
+    init_store( state.demography_done );
+});
 onMounted( () => {
-    init_place( store.demography_done );
+    init_store( store.demography_done );
 });
 </script>
 
