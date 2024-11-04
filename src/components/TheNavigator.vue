@@ -13,5 +13,9 @@
             <span class="ts-icon is-map-icon"></span>
             <div class="label">{{ $t("place.title") }}</div>
         </RouterLink>
+        <RouterLink to="/about" class="item">
+            <span class="ts-icon is-user-icon"></span>
+            <div class="label">{{ $t("character.title") }}</div>
+        </RouterLink>
     </nav>
 </template>

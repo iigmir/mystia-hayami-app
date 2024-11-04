@@ -31,5 +31,8 @@
             "th_tag": "Tag",
             "th_amo": "Amount"
         }
+    },
+    "character": {
+        "title": "Characters"
     }
 }

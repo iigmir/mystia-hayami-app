@@ -31,5 +31,8 @@
             "th_tag": "標籤",
             "th_amo": "數量"
         }
+    },
+    "character": {
+        "title": "角色"
     }
 }

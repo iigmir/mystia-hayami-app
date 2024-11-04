@@ -1,5 +1,5 @@
 <template>
-    <article id="router-places">
+    <article id="router-place">
         <h1>{{ $t("place.title") }}</h1>
         <p>{{ $t("place.subtitle") }}</p>
         <section class="ts-select">
