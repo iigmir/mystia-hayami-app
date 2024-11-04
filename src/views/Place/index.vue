@@ -52,7 +52,7 @@ const local_action = (store) => {
 // Tabs module
 const { t } = useI18n();
 const tabs = [
-    { value: 1, text: t("place.metadata.title"), icon: "is-list-icon" },
+    { value: 1, text: t("commons.metadata.title"), icon: "is-list-icon" },
     { value: 2, text: t("commons.customer.title"), icon: "is-chart-line-icon" },
     { value: 3, text: t("place.tags.title"), icon: "is-scroll-icon" },
 ];

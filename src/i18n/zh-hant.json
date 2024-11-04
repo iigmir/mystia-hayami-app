@@ -1,6 +1,12 @@
 {
     "app_title": "早見夜雀",
     "commons": {
+        "metadata": {
+            "title": "基本資料",
+            "name": "名稱",
+            "links": "連結",
+            "dlc": "DLC"
+        },
         "customer": {
             "title": "來客",
             "regular": "普通",
@@ -19,12 +25,6 @@
     "place": {
         "title": "地點",
         "subtitle": "Where do you want to go today?",
-        "metadata": {
-            "title": "基本資料",
-            "name": "名稱",
-            "links": "連結",
-            "dlc": "DLC"
-        },
         "tags": {
             "title": "標籤",
             "likes": "什麼樣的標籤最受歡迎？",

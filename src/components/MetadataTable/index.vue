@@ -1,15 +1,15 @@
 <template>
     <div class="metadata">
-        <h2>{{ $t("place.metadata.title") }}</h2>
+        <h2>{{ $t("commons.metadata.title") }}</h2>
         <table class="ts-table is-striped">
-            <caption>{{ $t("place.metadata.title") }}</caption>
+            <caption>{{ $t("commons.metadata.title") }}</caption>
             <tbody>
                 <tr>
-                    <td>{{ $t("place.metadata.name") }}</td>
+                    <td>{{ $t("commons.metadata.name") }}</td>
                     <td>{{ name }}</td>
                 </tr>
                 <tr>
-                    <td>{{ $t("place.metadata.links") }}</td>
+                    <td>{{ $t("commons.metadata.links") }}</td>
                     <td>
                         <ul>
                             <li v-if="item.links.wikidata"><inter-link type="wikidata" :qid="item.links.wikidata" text="wikidata" /></li>
@@ -19,7 +19,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>{{ $t("place.metadata.dlc") }}</td>
+                    <td>{{ $t("commons.metadata.dlc") }}</td>
                     <td>{{ item.dlc }}</td>
                 </tr>
             </tbody>

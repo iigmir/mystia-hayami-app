@@ -1,6 +1,12 @@
 {
     "app_title": "ミスティア・ハヤミ",
     "commons": {
+        "metadata": {
+            "title": "Metadata",
+            "name": "Name",
+            "links": "Link",
+            "dlc": "DLC"
+        },
         "customer": {
             "title": "Customers",
             "regular": "Regular",
@@ -19,12 +25,6 @@
     "place": {
         "title": "場所",
         "subtitle": "Where do you want to go today?",
-        "metadata": {
-            "title": "Metadata",
-            "name": "Name",
-            "links": "Link",
-            "dlc": "DLC"
-        },
         "tags": {
             "title": "Tags",
             "likes": "What kind of tags are popular among customers?",

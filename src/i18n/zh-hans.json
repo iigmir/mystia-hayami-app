@@ -1,6 +1,12 @@
 {
     "app_title": "早见夜雀",
     "commons": {
+        "metadata": {
+            "title": "基本资料",
+            "name": "名称",
+            "links": "连结",
+            "dlc": "DLC"
+        },
         "customer": {
             "title": "来客",
             "regular": "普通",
@@ -19,12 +25,6 @@
     "place": {
         "title": "地点",
         "subtitle": "Where do you want to go today?",
-        "metadata": {
-            "title": "基本资料",
-            "name": "名称",
-            "links": "连结",
-            "dlc": "DLC"
-        },
         "tags": {
             "title": "标签",
             "likes": "什么样的标签最受欢迎？",
