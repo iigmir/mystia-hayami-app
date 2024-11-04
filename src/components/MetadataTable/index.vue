@@ -2,7 +2,7 @@
     <div class="metadata">
         <h2>{{ $t("place.metadata.title") }}</h2>
         <table class="ts-table is-striped">
-            <caption>{{ $t("place.metadata.name") }}</caption>
+            <caption>{{ $t("place.metadata.title") }}</caption>
             <tbody>
                 <tr>
                     <td>{{ $t("place.metadata.name") }}</td>
