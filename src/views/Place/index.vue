@@ -23,7 +23,7 @@
             </div>
         </section>
         <section>
-             <component v-bind:is="selected_tab" v-bind:item="selected_item" />
+            <component v-bind:is="selected_tab" v-bind:item="selected_item" />
         </section>
     </article>
 </template>

@@ -6,14 +6,14 @@
             <div class="label">{{ $t("home.title") }}</div>
         </RouterLink>
         <RouterLink to="/about" class="item">
-            <span class="ts-icon is-user-icon"></span>
+            <span class="ts-icon is-info-icon"></span>
             <div class="label">{{ $t("about.title") }}</div>
         </RouterLink>
         <RouterLink to="/place" class="item">
             <span class="ts-icon is-map-icon"></span>
             <div class="label">{{ $t("place.title") }}</div>
         </RouterLink>
-        <RouterLink to="/about" class="item">
+        <RouterLink to="/character" class="item">
             <span class="ts-icon is-user-icon"></span>
             <div class="label">{{ $t("character.title") }}</div>
         </RouterLink>
