@@ -4,29 +4,21 @@
         <section class="normal">
             <h4>{{ $t("commons.customer.regular") }}</h4>
             <div class="ts-grid">
-                <customer-info
-                    v-for="item in fitted_normal_guests"
-                    v-bind:key="item.game_id"
-                    v-bind:item="item"
-                />
+                <customer-info v-for="item in fitted_normal_guests" v-bind:key="item.game_id" v-bind:item="item" />
             </div>
         </section>
         <div class="ts-divider is-section has-top-spaced-large"></div>
         <section class="rare">
             <h4>{{ $t("commons.customer.rare") }}</h4>
             <div class="ts-grid">
-                <customer-info
-                    v-for="item in fitted_rare_guests"
-                    v-bind:key="item.game_id"
-                    v-bind:item="item"
-                />
+                <customer-info v-for="item in fitted_rare_guests" v-bind:key="item.game_id" v-bind:item="item" />
             </div>
         </section>
     </div>
 </template>
 
 <script setup>
-import CustomerInfo from "./components/CustomerInfo.vue";
+import CustomerInfo from "@/components/Character.vue";
 import { computed } from "vue";
 import { useDemographyStore } from "@/store/demography";
 

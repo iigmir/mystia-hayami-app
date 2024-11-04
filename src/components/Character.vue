@@ -1,6 +1,6 @@
 <template>
     <div class="column is-2-wide">
-        <div v-if="!hideAvatar" class="ts-image is-circular is-centered">
+        <div class="ts-image is-circular is-centered">
             <img v-bind:src="imgsrc" width="90" />
         </div>
         <div class="ts-text is-center-aligned">
@@ -11,14 +11,12 @@
 
 <script setup>
 import { computed } from "vue";
-const props = defineProps({
-    item: Object,
-    hideAvatar: Boolean
-});
+
+const props = defineProps(["item"]);
 
 const imgsrc = computed( () => {
     const { avatar } = props.item.data;
-    if( props.hideAvatar || !avatar[0] ) {
+    if( !avatar[0] ) {
         return `tamplate-avatar.svg`;
     }
     const domain = import.meta.env.VITE_IMAGE_domain;

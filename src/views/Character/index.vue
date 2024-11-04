@@ -4,8 +4,14 @@
         <p>{{ $t("character.subtitle") }}</p>
         <div class="ts-divider"></div>
         <h2>{{ $t("commons.customer.rare") }}</h2>
+        <section class="rare-characters ts-grid">
+            <customer-info v-for="item in store.rare_guests" v-bind:key="item.game_id" v-bind:item="item" />
+        </section>
         <div class="ts-divider"></div>
         <h2>{{ $t("commons.customer.regular") }}</h2>
+        <section class="normal-characters ts-grid">
+            <customer-info v-for="item in store.normal_guests" v-bind:key="item.game_id" v-bind:item="item" />
+        </section>
     </article>
 </template>
 
@@ -13,6 +19,7 @@
 import { computed, ref, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useDemographyStore } from "../../store/demography.js";
+import CustomerInfo from "@/components/Character.vue";
 
 // Store module
 const store = useDemographyStore();
