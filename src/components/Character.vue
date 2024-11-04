@@ -1,11 +1,13 @@
 <template>
     <div class="column is-2-wide">
-        <div class="ts-image is-circular is-centered">
-            <img v-bind:src="imgsrc" width="90" />
-        </div>
-        <div class="ts-text is-center-aligned">
-            <p>{{ item.name[$i18n.locale] }}</p>
-        </div>
+        <RouterLink v-bind:to="`/character/${item.app_label_id}`">
+            <div class="ts-image is-circular is-centered">
+                <img v-bind:src="imgsrc" width="90" />
+            </div>
+            <div class="ts-text is-center-aligned">
+                <p>{{ item.name[$i18n.locale] }}</p>
+            </div>
+        </RouterLink>
     </div>
 </template>
 
