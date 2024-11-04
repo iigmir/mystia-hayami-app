@@ -1,6 +1,12 @@
 {
     "app_title": "ミスティア・ハヤミ",
-    "commons": {},
+    "commons": {
+        "customer": {
+            "title": "Customers",
+            "regular": "Regular",
+            "rare": "Rare"
+        }
+    },
     "home": {
         "title": "ホームページ",
         "subtitle": "ようこそ。ご利用にありがとうございます。"
@@ -18,11 +24,6 @@
             "name": "Name",
             "links": "Link",
             "dlc": "DLC"
-        },
-        "customer": {
-            "title": "Customers",
-            "regular": "Regular",
-            "rare": "Rare"
         },
         "tags": {
             "title": "Tags",

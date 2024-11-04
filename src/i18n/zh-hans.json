@@ -1,6 +1,12 @@
 {
     "app_title": "早见夜雀",
-    "commons": {},
+    "commons": {
+        "customer": {
+            "title": "来客",
+            "regular": "普通",
+            "rare": "稀有、特殊"
+        }
+    },
     "home": {
         "title": "首页",
         "subtitle": "欢迎使用{app_title}！"
@@ -13,11 +19,6 @@
     "place": {
         "title": "地点",
         "subtitle": "Where do you want to go today?",
-        "customer": {
-            "title": "来客",
-            "regular": "普通",
-            "rare": "稀有、特殊"
-        },
         "metadata": {
             "title": "基本资料",
             "name": "名称",

@@ -1,6 +1,12 @@
 {
     "app_title": "Mystia Hayami",
-    "commons": {},
+    "commons": {
+        "customer": {
+            "title": "Customers",
+            "regular": "Regular",
+            "rare": "Rare"
+        }
+    },
     "home": {
         "title": "Home",
         "subtitle": "Welcome to use {app_title}!"
@@ -18,11 +24,6 @@
             "name": "Name",
             "links": "Link",
             "dlc": "DLC"
-        },
-        "customer": {
-            "title": "Customers",
-            "regular": "Regular",
-            "rare": "Rare"
         },
         "tags": {
             "title": "Tags",

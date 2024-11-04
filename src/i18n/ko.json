@@ -1,6 +1,12 @@
 {
     "app_title": "미스티아 하야미",
-    "commons": {},
+    "commons": {
+        "customer": {
+            "title": "Customers",
+            "regular": "Regular",
+            "rare": "Rare"
+        }
+    },
     "home": {
         "title": "홈페이지",
         "subtitle": "안녕하세요. 이용해 주셔서 감사합니다."
@@ -18,11 +24,6 @@
             "name": "Name",
             "links": "Link",
             "dlc": "DLC"
-        },
-        "customer": {
-            "title": "Customers",
-            "regular": "Regular",
-            "rare": "Rare"
         },
         "tags": {
             "title": "Tags",

@@ -60,7 +60,7 @@ store.$subscribe( (mutation, state) => {
 const { t } = useI18n();
 const tabs = [
     { value: 1, text: t("place.metadata.title"), icon: "is-list-icon" },
-    { value: 2, text: t("place.customer.title"), icon: "is-chart-line-icon" },
+    { value: 2, text: t("commons.customer.title"), icon: "is-chart-line-icon" },
     { value: 3, text: t("place.tags.title"), icon: "is-scroll-icon" },
 ];
 const tab_model = ref(1);
