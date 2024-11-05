@@ -6,7 +6,7 @@
     </main>
 </template>
 
-<script setup>
+<script setup lang="js">
 import { useFoodStore } from "./store/food";
 import { useDemographyStore } from "./store/demography";
 import HeaderTitle from "./components/HeaderTitle.vue";

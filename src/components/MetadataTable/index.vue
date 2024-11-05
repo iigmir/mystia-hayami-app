@@ -27,7 +27,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="js">
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import InterLink from "./InterLink.vue";

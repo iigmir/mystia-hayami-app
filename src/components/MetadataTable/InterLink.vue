@@ -2,7 +2,7 @@
     <a :href="href">{{ props.text }}</a>
 </template>
 
-<script setup>
+<script setup lang="js">
 import { computed } from "vue";
 
 const props = defineProps({

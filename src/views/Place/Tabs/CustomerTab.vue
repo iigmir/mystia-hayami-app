@@ -17,7 +17,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="js">
 import CustomerInfo from "@/components/Character/Link.vue";
 import { computed } from "vue";
 import { useDemographyStore } from "@/store/demography";

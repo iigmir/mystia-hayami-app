@@ -14,7 +14,7 @@
     </article>
 </template>
 
-<script setup>
+<script setup lang="js">
 import { onMounted } from "vue";
 import { useDemographyStore } from "@/store/demography.js";
 import CustomerInfo from "@/components/Character/Link.vue";

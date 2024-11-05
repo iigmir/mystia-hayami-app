@@ -34,7 +34,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="js">
 import { onMounted, computed } from "vue";
 import { useI18n } from "vue-i18n";
 import { useFoodStore } from "@/store/food";

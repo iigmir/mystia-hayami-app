@@ -28,7 +28,7 @@
     </article>
 </template>
 
-<script setup>
+<script setup lang="js">
 import { computed, ref, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useDemographyStore } from "../../store/demography.js";
