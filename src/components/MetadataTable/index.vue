@@ -12,9 +12,9 @@
                     <td>{{ $t("commons.metadata.links") }}</td>
                     <td>
                         <ul>
-                            <li v-if="item.links.wikidata"><inter-link type="wikidata" :qid="item.links.wikidata" text="wikidata" /></li>
-                            <li v-if="item.links.thwiki"><inter-link type="thwiki" :qid="item.links.thwiki" text="thwiki" /></li>
-                            <li v-if="item.links.touhouwiki"><inter-link type="touhouwiki" :qid="item.links.touhouwiki" text="touhouwiki" /></li>
+                            <li v-for="link in name_links" v-bind:key="link.type">
+                                <inter-link v-bind="link" />
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -44,4 +44,11 @@ const props = defineProps(["item"]);
 const item = computed( () => props?.item ?? exp );
 
 const name = computed( () => item.value.name[useI18n().locale.value] ?? "-" );
+const name_links = computed( () => {
+    const texts = ["wikidata", "thwiki", "touhouwiki"];
+    return texts
+        .map( type => ({ type, text: type, qid: item.value.links[type] }) )
+        .filter( ({ qid }) => Boolean(qid) )
+    ;
+});
 </script>
