@@ -6,9 +6,9 @@
     </article>
 </template>
 
-<script setup>
+<script setup lang="js">
 import { useRoute } from "vue-router";
-import { computed, ref, onMounted } from "vue";
+import { computed, onMounted } from "vue";
 import { useDemographyStore } from "@/store/demography.js";
 
 // Store module
@@ -16,15 +16,10 @@ const route = useRoute();
 const store = useDemographyStore();
 
 // Selected item module
-const chosen_guest = computed(() => {
-    return store.rare_guests.find( its => its.app_label_id === route.params.name ) ?? {};
-});
-const chosen_character = computed(() => {
-    return store.normal_guests.find( its => its.app_label_id === route.params.name ) ?? {};
-});
-const chosen_partner = computed(() => {
-    return store.partners.find( its => its.app_label_id === route.params.name ) ?? {};
-});
+const get_user = (guests = []) => guests.find( ({ app_label_id }) => app_label_id === route.params.name ) ?? {};
+const chosen_guest = computed( () => get_user(store.rare_guests) );
+const chosen_character = computed( () => get_user(store.normal_guests) );
+const chosen_partner = computed( () => get_user(store.partners) );
 const local_action = () => {};
 
 // Actions
