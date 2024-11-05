@@ -8,7 +8,7 @@
                     <td>{{ $t("commons.metadata.name") }}</td>
                     <td>{{ name }}</td>
                 </tr>
-                <tr>
+                <tr v-if="name_links.length > 0">
                     <td>{{ $t("commons.metadata.links") }}</td>
                     <td>
                         <ul>
@@ -46,9 +46,13 @@ const item = computed( () => props?.item ?? exp );
 const name = computed( () => item.value.name[useI18n().locale.value] ?? "-" );
 const name_links = computed( () => {
     const texts = ["wikidata", "thwiki", "touhouwiki"];
+    function get_qid(type) {
+        return item.value.links ? item.value.links[type] : "";
+    }
     return texts
-        .map( type => ({ type, text: type, qid: item.value.links[type] }) )
+        .map( type => ({ type, text: type, qid: get_qid(type) }) )
         .filter( ({ qid }) => Boolean(qid) )
     ;
 });
 </script>
+

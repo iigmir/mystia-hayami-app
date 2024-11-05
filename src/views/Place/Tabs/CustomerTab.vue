@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import CustomerInfo from "@/components/Character.vue";
+import CustomerInfo from "@/components/Character/Link.vue";
 import { computed } from "vue";
 import { useDemographyStore } from "@/store/demography";
 

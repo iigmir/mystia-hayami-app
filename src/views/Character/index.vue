@@ -15,10 +15,9 @@
 </template>
 
 <script setup>
-import { computed, ref, onMounted } from "vue";
-import { useI18n } from "vue-i18n";
+import { onMounted } from "vue";
 import { useDemographyStore } from "@/store/demography.js";
-import CustomerInfo from "@/components/Character.vue";
+import CustomerInfo from "@/components/Character/Link.vue";
 
 // Store module
 const store = useDemographyStore();

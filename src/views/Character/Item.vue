@@ -1,6 +1,6 @@
 <template>
     <article id="router-characteritem">
-        <metadata-table v-bind:item="metadata" />
+        <metadata-table v-if="metadata.name" v-bind:item="metadata" />
     </article>
 </template>
 
