@@ -1,5 +1,6 @@
 <template>
     <article id="router-characteritem">
+        <avatar-picture v-bind:item="metadata" />
         <metadata-table v-if="metadata.name" v-bind:item="metadata" />
     </article>
 </template>
@@ -9,6 +10,7 @@ import { useRoute } from "vue-router";
 import { computed, onMounted } from "vue";
 import { useDemographyStore } from "@/store/demography.js";
 import MetadataTable from "@/components/MetadataTable/index.vue";
+import AvatarPicture from "@/components/Character/Pure.vue";
 
 // Store module
 const route = useRoute();
