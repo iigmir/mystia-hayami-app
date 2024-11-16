@@ -4,14 +4,18 @@
         <section class="normal">
             <h4>{{ $t("commons.customer.regular") }}</h4>
             <div class="ts-grid">
-                <customer-info v-for="item in fitted_normal_guests" v-bind:key="item.game_id" v-bind:item="item" />
+                <div class="column is-2-wide" v-for="item in fitted_normal_guests" v-bind:key="item.game_id" >
+                    <customer-info v-bind:item="item" />
+                </div>
             </div>
         </section>
         <div class="ts-divider is-section has-top-spaced-large"></div>
         <section class="rare">
             <h4>{{ $t("commons.customer.rare") }}</h4>
             <div class="ts-grid">
-                <customer-info v-for="item in fitted_rare_guests" v-bind:key="item.game_id" v-bind:item="item" />
+                <div class="column is-2-wide" v-for="item in fitted_rare_guests" v-bind:key="item.game_id">
+                    <customer-info v-bind:item="item" />
+                </div>
             </div>
         </section>
     </div>

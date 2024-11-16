@@ -5,11 +5,15 @@
         <div class="ts-divider"></div>
         <h2>{{ $t("commons.customer.rare") }}</h2>
         <section class="rare-characters ts-grid">
-            <customer-info v-for="item in store.rare_guests" v-bind:key="item.app_label_id" v-bind:item="item" />
+            <div class="column is-2-wide" v-for="item in store.rare_guests" v-bind:key="item.game_id">
+                <customer-info v-bind:item="item" />
+            </div>
         </section>
         <h2>{{ $t("commons.customer.regular") }}</h2>
         <section class="normal-characters ts-grid">
-            <customer-info v-for="item in store.normal_guests" v-bind:key="item.app_label_id" v-bind:item="item" />
+            <div class="column is-2-wide" v-for="item in store.normal_guests" v-bind:key="item.game_id">
+                <customer-info v-bind:item="item" />
+            </div>
         </section>
     </article>
 </template>
@@ -18,6 +22,8 @@
 import { onMounted } from "vue";
 import { useDemographyStore } from "@/store/demography.js";
 import CustomerInfo from "@/components/Character/Link.vue";
+import RareCustomerInfo from "@/components/Character/Link.vue";
+import RegularCustomerInfo from "@/components/Character/Pure.vue";
 
 // Store module
 const store = useDemographyStore();
