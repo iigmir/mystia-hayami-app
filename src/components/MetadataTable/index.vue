@@ -12,7 +12,7 @@
                     <td>{{ $t("commons.metadata.links") }}</td>
                     <td>
                         <ul>
-                            <li v-for="link in name_links" v-bind:key="link.type">
+                            <li v-for="link in name_links" v-bind:key="link.type" v-bind:class="[link.type]">
                                 <inter-link v-bind="link" />
                             </li>
                         </ul>
@@ -55,4 +55,11 @@ const name_links = computed( () => {
     ;
 });
 </script>
+
+<style scoped>
+/* FIXME: list-style-image cannot specify size */
+/* li.wikidata { list-style-image: url("wikidata.ico"); }
+li.thwiki { list-style-image: url("thwiki.ico"); }
+li.touhouwiki { list-style-image: url("touhouwiki.ico"); } */
+</style>
 
