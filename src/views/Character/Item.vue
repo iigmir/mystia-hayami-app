@@ -2,6 +2,8 @@
     <article id="router-characteritem">
         <avatar-picture v-bind:item="metadata" />
         <metadata-table v-if="metadata.name" v-bind:item="metadata" />
+        <div class="ts-divider"></div>
+        <h2>最喜愛的料理</h2>
     </article>
 </template>
 
